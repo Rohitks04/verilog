@@ -8,7 +8,7 @@ module tb_2_in_mux;
     mux_2in uut (.a(a), .b(b), .sel(sel), .out(out));
 
     initial begin
-        $dumpfile("dump.vcd");
+        $dumpfile("waves/dump.vcd");
         $dumpvars(0,tb_2_in_mux);
     end
     integer pass=0;
