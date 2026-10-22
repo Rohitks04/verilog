@@ -1,4 +1,4 @@
-module four_bit_half_adder (
+module half_adder_4bit (
 	input  wire [3:0] a,
 	input  wire [3:0] b,
 	output wire [3:0] sum,

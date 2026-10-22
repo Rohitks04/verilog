@@ -9,7 +9,7 @@ module tb_4bit_half_adder;
 	integer i;
 	integer j;
 
-	four_bit_half_adder dut (
+	half_adder_4bit dut (
 		.a(a),
 		.b(b),
 		.sum(sum),
@@ -21,7 +21,8 @@ module tb_4bit_half_adder;
         $dumpvars(0,tb_4bit_half_adder);
     end
 
-    initial begin    
+    initial begin  
+		$monitor("a = %b | b = %b | sum = %b | carry = %b",a,b,sum,carry);  
 		for (i = 0; i < 16; i = i + 1) begin
 			for (j = 0; j < 16; j = j + 1) begin
 				a = i;
