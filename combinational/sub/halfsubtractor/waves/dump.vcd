@@ -1,0 +1,56 @@
+$date
+	Mon Oct 26 07:22:04 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_half_subtractor $end
+$var wire 1 ! diff $end
+$var wire 1 " borrow $end
+$var reg 1 # a $end
+$var reg 1 $ b $end
+$var integer 32 % errors [31:0] $end
+$scope module dut $end
+$var wire 1 # a $end
+$var wire 1 $ b $end
+$var wire 1 " borrow $end
+$var wire 1 ! diff $end
+$upscope $end
+$scope task check_result $end
+$var reg 1 & expected_borrow $end
+$var reg 1 ' expected_diff $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0'
+0&
+b0 %
+0$
+0#
+0"
+0!
+$end
+#10000
+1!
+1"
+1&
+1'
+1$
+#20000
+0"
+0&
+0$
+1#
+#30000
+0!
+0'
+1$
+#40000
