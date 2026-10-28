@@ -9,3 +9,4 @@ module half_subtractor (
 	assign borrow = ~a & b;
 
 endmodule
+

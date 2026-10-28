@@ -13,7 +13,7 @@ module tb_full_adder_4bit;
 
 	
 
-	// Positional ports: A, B, Cin, Sum, Cout.
+	// Positional ports: A, B, Cin, Sum, Cout.  
 	full_adder_4bit dut (a, b, cin, sum, cout);
 
 	initial begin

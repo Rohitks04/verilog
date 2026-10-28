@@ -1,0 +1,8 @@
+VCD info: dumpfile waves/dump.vcd opened for output.
+Time=0 | din=0 sel=00 | y=0000
+Time=10000 | din=1 sel=00 | y=0001
+Time=20000 | din=1 sel=01 | y=0010
+Time=30000 | din=1 sel=10 | y=0100
+Time=40000 | din=1 sel=11 | y=1000
+Time=50000 | din=0 sel=11 | y=0000
+tb/tb_demux_1to4.v:31: $finish called at 60000 (1ps)

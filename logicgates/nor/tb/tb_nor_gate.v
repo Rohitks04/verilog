@@ -7,7 +7,7 @@ module tb_nor_gate;
     reg b;
     wire y;
 
-    nor_gate uut (
+    nor_gate dut (
         .a(a),
         .b(b),
         .y(y)
