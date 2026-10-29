@@ -1,16 +1,11 @@
-module mux_2in1 (
-	input  wire a,
-	input  wire b,
-	input  wire sel,
-	output reg  y
+module mux_2to1 (
+    input a, b, sel,
+    output reg y
 );
-
 always @(*) begin
-	if (sel)
-		y = b;
-	else
-		y = a;
+    if (sel == 1'b0)
+        y = a;
+    else
+        y = b;
 end
-
 endmodule
-

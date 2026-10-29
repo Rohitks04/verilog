@@ -8,7 +8,7 @@ reg sel;
 wire y;
 integer i;
 
-mux_2in1 dut (
+mux_2to1 dut (
 	.a(a),
 	.b(b),
 	.sel(sel),
