@@ -1,0 +1,77 @@
+$date
+	Tue Nov 10 07:01:00 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_encoder_10to4 $end
+$var wire 4 ! out [3:0] $end
+$var reg 10 " in [9:0] $end
+$scope module dut $end
+$var wire 10 # in [9:0] $end
+$var wire 4 $ out [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 $
+b0 #
+b0 "
+b0 !
+$end
+#10
+b1 "
+b1 #
+#20
+b1 !
+b1 $
+b10 "
+b10 #
+#30
+b10 !
+b10 $
+b100 "
+b100 #
+#40
+b11 !
+b11 $
+b1000 "
+b1000 #
+#50
+b100 !
+b100 $
+b10000 "
+b10000 #
+#60
+b101 !
+b101 $
+b100000 "
+b100000 #
+#70
+b110 !
+b110 $
+b1000000 "
+b1000000 #
+#80
+b111 !
+b111 $
+b10000000 "
+b10000000 #
+#90
+b1000 !
+b1000 $
+b100000000 "
+b100000000 #
+#100
+b1001 !
+b1001 $
+b1000000000 "
+b1000000000 #
+#110
