@@ -1,4 +1,4 @@
-'`timescale 1ps/1ps
+`timescale 1ps/1ps
 
 module tb_decoder_3to8;
 reg  [2:0] in;

@@ -4,9 +4,9 @@ module priority_encoder_8to3 (
 );
 
 always @(*) begin
-    if(in[7])
+    if (in[7])
         out = 3'b111;
-    else if (in[6])
+    else if (in[6]) 
         out = 3'b110;
     else if (in[5])
         out = 3'b101;
@@ -24,5 +24,5 @@ always @(*) begin
         out = 3'b000; // Default case when no input is high
 
 end
-    
+
 endmodule
