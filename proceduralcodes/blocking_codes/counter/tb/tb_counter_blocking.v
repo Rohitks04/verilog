@@ -1,11 +1,11 @@
 `timescale 1ns/1ps
 
-module tb_counter_blocking;
+module tb_counter_unblocking;
 	reg clk;
 	reg reset;
 	wire [3:0] count;
 
-	counter_blocking dut (
+	counter_unblocking dut (
 		.clk   (clk),
 		.reset (reset),
 		.count (count)
@@ -13,7 +13,7 @@ module tb_counter_blocking;
 
 	initial begin
         $dumpfile("waves/dump.vcd");
-        $dumpvars(0, tb_counter_blocking);
+        $dumpvars(0, tb_counter_unblocking);
 		clk = 1'b0;
 		forever #5 clk = ~clk;
 	end

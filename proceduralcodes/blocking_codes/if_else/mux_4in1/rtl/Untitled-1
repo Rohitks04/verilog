@@ -1,0 +1,34 @@
+`timescale 1ns/1ps
+
+module tb_mux_4in1;
+	reg [3:0] d;
+	reg [1:0] sel;
+	wire y;
+	integer data_value;
+	integer select_value;
+
+	mux_4in1 dut (
+		.d(d),
+		.sel(sel),
+		.y(y)
+	);
+
+	initial begin
+		$dumpfile("waves/dump.vcd");
+		$dumpvars(0, tb_mux_4in1);
+		for (data_value = 0; data_value < 16; data_value = data_value + 1) begin
+			d =  data_value;
+			for (select_value = 0; select_value < 4; select_value = select_value + 1) begin
+				sel = select_value;
+				#1;
+				if (y !== d[sel]) begin
+					$display("FAIL: d=%b sel=%b y=%b expected=%b", d, sel, y, d[sel]);
+					$finish;
+				end
+			end
+		end
+
+		$display("PASS: all mux4to1 input combinations verified");
+		$finish;
+	end
+endmodule

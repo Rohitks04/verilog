@@ -38,4 +38,3 @@ module ripple_adder #(parameter n = 4)
     endgenerate
 
 endmodule
-

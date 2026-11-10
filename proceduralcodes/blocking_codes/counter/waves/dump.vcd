@@ -1,5 +1,5 @@
 $date
-	Wed Oct 28 13:54:39 2026
+	Wed Oct 28 14:00:21 2026
 $end
 $version
 	Icarus Verilog
@@ -7,7 +7,7 @@ $end
 $timescale
 	1ps
 $end
-$scope module tb_counter_blocking $end
+$scope module tb_counter_unblocking $end
 $var wire 4 ! count [3:0] $end
 $var reg 1 " clk $end
 $var reg 1 # reset $end

@@ -1,4 +1,4 @@
-module counter_blocking #(
+module counter_unblocking #(
 	parameter WIDTH = 4
 ) (
 	input wire clk,
