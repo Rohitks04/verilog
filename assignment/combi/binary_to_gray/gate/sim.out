@@ -1,0 +1,108 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2009.vpi";
+S_0x55a0201d8a70 .scope package, "$unit" "$unit" 2 1;
+ .timescale 0 0;
+S_0x55a0201d8c00 .scope module, "tb_binary_to_gray" "tb_binary_to_gray" 3 2;
+ .timescale -9 -12;
+v0x55a0201f12e0_0 .var "binary", 3 0;
+v0x55a0201f13a0_0 .net "gray", 3 0, L_0x55a0201f1b30;  1 drivers
+S_0x55a02019e500 .scope module, "dut" "binary_to_gray" 3 5, 4 1 0, S_0x55a0201d8c00;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "binary";
+    .port_info 1 /OUTPUT 4 "gray";
+L_0x55a0201f1470 .functor BUF 1, L_0x55a0201f1540, C4<0>, C4<0>, C4<0>;
+L_0x55a0201f1630 .functor XOR 1, L_0x55a0201f16f0, L_0x55a0201f17e0, C4<0>, C4<0>;
+L_0x55a0201f18d0 .functor XOR 1, L_0x55a0201f1970, L_0x55a0201f1a40, C4<0>, C4<0>;
+L_0x55a0201f1d50 .functor XOR 1, L_0x55a0201f1e10, L_0x55a0201f1f00, C4<0>, C4<0>;
+v0x55a02019e6e0_0 .net *"_ivl_1", 0 0, L_0x55a0201f1470;  1 drivers
+v0x55a0201f07d0_0 .net *"_ivl_11", 0 0, L_0x55a0201f17e0;  1 drivers
+v0x55a0201f08b0_0 .net *"_ivl_13", 0 0, L_0x55a0201f18d0;  1 drivers
+v0x55a0201f0970_0 .net *"_ivl_16", 0 0, L_0x55a0201f1970;  1 drivers
+v0x55a0201f0a50_0 .net *"_ivl_18", 0 0, L_0x55a0201f1a40;  1 drivers
+v0x55a0201f0b80_0 .net *"_ivl_20", 0 0, L_0x55a0201f1d50;  1 drivers
+v0x55a0201f0c60_0 .net *"_ivl_24", 0 0, L_0x55a0201f1e10;  1 drivers
+v0x55a0201f0d40_0 .net *"_ivl_26", 0 0, L_0x55a0201f1f00;  1 drivers
+v0x55a0201f0e20_0 .net *"_ivl_4", 0 0, L_0x55a0201f1540;  1 drivers
+v0x55a0201f0f00_0 .net *"_ivl_6", 0 0, L_0x55a0201f1630;  1 drivers
+v0x55a0201f0fe0_0 .net *"_ivl_9", 0 0, L_0x55a0201f16f0;  1 drivers
+v0x55a0201f10c0_0 .net "binary", 3 0, v0x55a0201f12e0_0;  1 drivers
+v0x55a0201f11a0_0 .net "gray", 3 0, L_0x55a0201f1b30;  alias, 1 drivers
+L_0x55a0201f1540 .part v0x55a0201f12e0_0, 3, 1;
+L_0x55a0201f16f0 .part v0x55a0201f12e0_0, 3, 1;
+L_0x55a0201f17e0 .part v0x55a0201f12e0_0, 2, 1;
+L_0x55a0201f1970 .part v0x55a0201f12e0_0, 2, 1;
+L_0x55a0201f1a40 .part v0x55a0201f12e0_0, 1, 1;
+L_0x55a0201f1b30 .concat8 [ 1 1 1 1], L_0x55a0201f1d50, L_0x55a0201f18d0, L_0x55a0201f1630, L_0x55a0201f1470;
+L_0x55a0201f1e10 .part v0x55a0201f12e0_0, 1, 1;
+L_0x55a0201f1f00 .part v0x55a0201f12e0_0, 0, 1;
+    .scope S_0x55a0201d8c00;
+T_0 ;
+    %vpi_call/w 3 10 "$dumpfile", "dump.vcd" {0 0 0};
+    %vpi_call/w 3 11 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x55a0201d8c00 {0 0 0};
+    %vpi_call/w 3 12 "$monitor", "time=%0t | binary=%b | gray =%b", $time, v0x55a0201f12e0_0, v0x55a0201f13a0_0 {0 0 0};
+    %pushi/vec4 0, 0, 4;
+    %store/vec4 v0x55a0201f12e0_0, 0, 4;
+    %delay 10000, 0;
+    %pushi/vec4 1, 0, 4;
+    %store/vec4 v0x55a0201f12e0_0, 0, 4;
+    %delay 10000, 0;
+    %pushi/vec4 3, 0, 4;
+    %store/vec4 v0x55a0201f12e0_0, 0, 4;
+    %delay 10000, 0;
+    %pushi/vec4 2, 0, 4;
+    %store/vec4 v0x55a0201f12e0_0, 0, 4;
+    %delay 10000, 0;
+    %pushi/vec4 6, 0, 4;
+    %store/vec4 v0x55a0201f12e0_0, 0, 4;
+    %delay 10000, 0;
+    %pushi/vec4 7, 0, 4;
+    %store/vec4 v0x55a0201f12e0_0, 0, 4;
+    %delay 10000, 0;
+    %pushi/vec4 5, 0, 4;
+    %store/vec4 v0x55a0201f12e0_0, 0, 4;
+    %delay 10000, 0;
+    %pushi/vec4 4, 0, 4;
+    %store/vec4 v0x55a0201f12e0_0, 0, 4;
+    %delay 10000, 0;
+    %pushi/vec4 12, 0, 4;
+    %store/vec4 v0x55a0201f12e0_0, 0, 4;
+    %delay 10000, 0;
+    %pushi/vec4 13, 0, 4;
+    %store/vec4 v0x55a0201f12e0_0, 0, 4;
+    %delay 10000, 0;
+    %pushi/vec4 15, 0, 4;
+    %store/vec4 v0x55a0201f12e0_0, 0, 4;
+    %delay 10000, 0;
+    %pushi/vec4 14, 0, 4;
+    %store/vec4 v0x55a0201f12e0_0, 0, 4;
+    %delay 10000, 0;
+    %pushi/vec4 10, 0, 4;
+    %store/vec4 v0x55a0201f12e0_0, 0, 4;
+    %delay 10000, 0;
+    %pushi/vec4 11, 0, 4;
+    %store/vec4 v0x55a0201f12e0_0, 0, 4;
+    %delay 10000, 0;
+    %pushi/vec4 9, 0, 4;
+    %store/vec4 v0x55a0201f12e0_0, 0, 4;
+    %delay 10000, 0;
+    %pushi/vec4 8, 0, 4;
+    %store/vec4 v0x55a0201f12e0_0, 0, 4;
+    %delay 10000, 0;
+    %vpi_call/w 3 29 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 5;
+    "N/A";
+    "<interactive>";
+    "-";
+    "tb_binay_to_gray.v";
+    "binary_to_gray.v";
